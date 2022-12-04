@@ -16,7 +16,7 @@ const handleClick=()=>{
 }
 
 
-  return(
+  /*return(
     <div className="App">
       <h1>How About Them Apples</h1>
       <form>
@@ -44,6 +44,15 @@ const handleClick=()=>{
     </div>
   )
 }
-
+*/
+return( 
+ <>
+ <button onClick={handleClick}
+id="button-a">click 1</button>
+<button onClick={handleClick}
+id="button-b">click 2</button>
+</>
+);
+}
 
 export default App;
