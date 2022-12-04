@@ -1,5 +1,5 @@
 
-import React, { useState, useRef } from 'react';
+import React from 'react';
 /**
  * @task :add validation to email, if email is not valid, if not valid email, dont allow to submit
  * @error_message :  "Email is invalid"  if email is wrong. (must be same message) 
@@ -7,24 +7,14 @@ import React, { useState, useRef } from 'react';
  * 
  */
 
-function App() {
+function App()=> {
 
-const[message, setMessage]=useState('');
- const[error, setError]=useState(null);
- function isValidEmail(email){
-  return /\S+@\S+\.\S+/.test(email);
- }
- 
- const handleChange=event =>{
- if(!isValidEmail(event.target.value)){
- setError('Email is unvalid');
-  
- }
-  else{
-   setError(null);
-  }
-  setMessage(event.target.value);
- };
+const handleClick=()=>{
+ document.getElementById('button-a').addEventListener('click',(ev)=>{
+ console.log("button one")
+ })
+}
+
 
   return(
     <div className="App">
