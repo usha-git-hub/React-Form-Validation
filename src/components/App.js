@@ -10,9 +10,12 @@ import React from 'react';
 function App()=> {
 
 const handleClick=()=>{
- document.getElementById('button-a').addEventListener('click',(ev)=>{
+ document.getElementById('button-a').addEventListener('click',(e)=>{
  console.log("button one")
  })
+ document.getElementById('button-b').addEventListener('click',(ev)=>{
+  console.log("button one")
+})
 }
 
 
