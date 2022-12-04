@@ -9,9 +9,22 @@ import React, { useState, useRef } from 'react';
 
 function App() {
 
- /**
-  * code here
-  */
+const[message, setMessage]=useState('');
+ const[error, setError]=useState(null);
+ function isValidEmail(email){
+  return /\S+@\S+\.\S+/.test(email);
+ }
+ 
+ const handleChange=event =>{
+ if(!isValidEmail(event.target.value)){
+ setError('Email is unvalid');
+  
+ }
+  else{
+   setError(null);
+  }
+  setMessage(event.target.value);
+ };
 
   return(
     <div className="App">
